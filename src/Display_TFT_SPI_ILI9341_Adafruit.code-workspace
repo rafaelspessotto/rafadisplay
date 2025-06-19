@@ -8,9 +8,6 @@
 			"path": ".."
 		}
 	],
-<<<<<<< Updated upstream
-	"settings": {}
-=======
 	"settings": {
 		"files.associations": {
 			"array": "cpp",
@@ -33,5 +30,4 @@
 			"string_view": "cpp"
 		}
 	}
->>>>>>> Stashed changes
 }
