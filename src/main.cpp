@@ -17,7 +17,8 @@ void showSplashScreen(){
   int centerOffsetY = 0;
   int x = (tft.width() - actualFaceSize) / 2 + centerOffsetX;
   int y = (tft.height() - actualFaceSize) / 2 + centerOffsetY;
-  drawCreeperFace(tft, x, y, actualFaceSize);
+  //drawCreeperFace(tft, x, y, actualFaceSize);
+  animateCreeper(tft, x, y, actualFaceSize);
 }
 
 void setup() {
@@ -27,5 +28,12 @@ void setup() {
 }
 
 void loop() {
-  
+    static unsigned long lastAnim = 0;
+    static bool first = true;
+    unsigned long now = millis();
+    if (first || now - lastAnim > 5000) {
+        first = false;
+        showSplashScreen();
+        lastAnim = millis();
+    }
 }
